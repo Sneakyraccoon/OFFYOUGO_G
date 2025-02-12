@@ -1,0 +1,32 @@
+{
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "ui5.vacation.view.App",
+            "type": "XML"
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "login",
+                    "target": "login"
+                },
+                {
+                    "pattern": "vacation",
+                    "name": "vacationRequest",
+                    "target": "vacationRequest"
+                }
+            ],
+            "targets": {
+                "login": {
+                    "viewName": "ui5.vacation.view.Login",
+                    "type": "XML"
+                },
+                "vacationRequest": {
+                    "viewName": "ui5.vacation.view.VacationRequest",
+                    "type": "XML"
+                }
+            }
+        }
+    }
+}

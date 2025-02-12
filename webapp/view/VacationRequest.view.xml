@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.vacation.controller.VacationRequest">
+    <Page title="Запрос отпуска">
+        <VBox>
+            <Label text="Выберите период отпуска" />
+            <DateRangeSelection id="vacationRange" displayFormat="dd/MM/yyyy" />
+            <Button text="Запросить отпуск" press="onRequestVacation" enabled="false" id="requestButton"/>
+        </VBox>
+    </Page>
+</mvc:View>
