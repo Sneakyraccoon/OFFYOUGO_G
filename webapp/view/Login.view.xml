@@ -1,0 +1,9 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.vacation.controller.Login">
+    <Page title="Вход">
+        <VBox>
+            <Input id="emailInput" placeholder="Введите email" />
+            <Input id="passwordInput" type="Password" placeholder="Введите пароль" />
+            <Button text="Войти" press="onLogin" />
+        </VBox>
+    </Page>
+</mvc:View>

@@ -1,4 +1,12 @@
 {
+    "sap.app": {
+        "id": "offyougo_g",
+        "type": "application",
+        "title": "UI5 Vacation Booking",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
     "sap.ui5": {
         "rootView": {
             "viewName": "ui5.vacation.view.App",
