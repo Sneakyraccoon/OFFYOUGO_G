@@ -1,40 +1,49 @@
 {
-    "sap.app": {
-        "id": "offyougo_g",
-        "type": "application",
-        "title": "UI5 Vacation Booking",
-        "applicationVersion": {
-            "version": "1.0.0"
-        }
-    },
     "sap.ui5": {
-        "rootView": {
-            "viewName": "ui5.vacation.view.App",
-            "type": "XML"
+      "rootView": {
+        "viewName": "ui5.vacation.view.App",
+        "type": "XML"
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "viewPath": "ui5.vacation.view",
+          "controlId": "app",
+          "controlAggregation": "pages",
+          "bypassed": {
+            "target": "login"
+          }
         },
-        "routing": {
-            "routes": [
-                {
-                    "pattern": "",
-                    "name": "login",
-                    "target": "login"
-                },
-                {
-                    "pattern": "vacation",
-                    "name": "vacationRequest",
-                    "target": "vacationRequest"
-                }
-            ],
-            "targets": {
-                "login": {
-                    "viewName": "ui5.vacation.view.Login",
-                    "type": "XML"
-                },
-                "vacationRequest": {
-                    "viewName": "ui5.vacation.view.VacationRequest",
-                    "type": "XML"
-                }
-            }
+        "routes": [
+          {
+            "pattern": "",
+            "name": "login",
+            "target": "login"
+          },
+          {
+            "pattern": "vacation",
+            "name": "vacationRequest",
+            "target": "vacationRequest"
+          },
+          {
+            "pattern": "manager",
+            "name": "managerInbox",
+            "target": "managerInbox"
+          }
+        ],
+        "targets": {
+          "login": {
+            "viewName": "Login"
+          },
+          "vacationRequest": {
+            "viewName": "VacationRequest"
+          },
+          "managerInbox": {
+            "viewName": "ManagerInbox"
+          }
         }
+      }
     }
-}
+  }
+  

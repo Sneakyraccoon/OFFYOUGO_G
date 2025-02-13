@@ -19,7 +19,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
                 }
 
                 const userData = await response.json();
-                this.getOwnerComponent().getRouter().navTo("vacationRequest");
+
+                        // Сохранение данных пользователя в глобальную модель
+        this.getOwnerComponent().getModel("userModel").setData(userData);
+
+        // Переключение на страницу "Запроса отпуска"
+        this.getOwnerComponent().getRouter().navTo("vacationRequest");
             } catch (error) {
                 MessageToast.show("Ошибка входа!");
             }
