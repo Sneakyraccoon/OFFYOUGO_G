@@ -10,6 +10,6 @@
   "license": "ISC",
   "description": "UI5 Vacation Booking Application",
   "devDependencies": {
-    "@ui5/cli": "^2.14.0"
+    "@ui5/cli": "^4.0.13"
   }
 }

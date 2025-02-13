@@ -44,6 +44,15 @@
           }
         }
       }
-    }
+    },
+
+    "sap.app": {
+      "id": "offyougo_g",
+      "type": "application",
+      "title": "UI5 Vacation Booking",
+      "applicationVersion": {
+          "version": "1.0.0"
+      }
+  }
   }
   
