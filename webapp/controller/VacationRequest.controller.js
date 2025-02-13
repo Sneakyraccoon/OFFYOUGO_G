@@ -3,7 +3,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
 
     return Controller.extend("ui5.vacation.controller.VacationRequest", {
         onInit: function () {
-            this.getView().byId("vacationRange").attachSelect(this.onDateSelect.bind(this));
+            this.getView().byId("vacationRange").attachChange(this.onDateSelect.bind(this));
         },
 
         onDateSelect: function () {

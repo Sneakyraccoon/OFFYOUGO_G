@@ -4,11 +4,19 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
     return Controller.extend("ui5.vacation.controller.ManagerInbox", {
         onInit: async function () {
             try {
-                const managerId = this.getOwnerComponent().getModel("userModel").getData().id;
+
+                const oModel = this.getOwnerComponent().getModel("userModel");
+                if (!oModel || !oModel.getData()) {
+                    MessageToast.show("Ошибка: данные менеджера не загружены");
+                    return;
+                }
+
+                const managerId = oModel.getData().id;
+
                 const response = await fetch(`/api/inbox/${managerId}`);
-                
+
                 if (!response.ok) throw new Error();
-        
+
                 const requests = await response.json();
                 this.getOwnerComponent().setModel(new sap.ui.model.json.JSONModel({ requests }), "inboxModel");
             } catch (error) {
@@ -34,6 +42,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
             });
 
             MessageToast.show(`Заявка ${decision}`);
+
+            // 🔥 Обновляем список заявок после одобрения/отклонения
+            this.onInit();
         }
     });
 });
