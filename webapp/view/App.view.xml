@@ -1,0 +1,18 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ui5.vacation.controller.App"
+    displayBlock="true">
+    
+    <App id="app">
+        <pages>
+            <Page id="appPage" title="Календарь отпусков">
+                <content>
+                    <VBox class="sapUiSmallMargin">
+                        <Text text="Добро пожаловать в систему бронирования отпусков!" />
+                    </VBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
