@@ -13,7 +13,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
                     body: JSON.stringify({ email, password })
                 });
 
-                if (!response.ok) throw new Error();
+                if (!response.ok) {
+                    MessageToast.show("Ошибка входа!");
+                    return;
+                }
 
                 const userData = await response.json();
                 this.getOwnerComponent().getRouter().navTo("vacationRequest");

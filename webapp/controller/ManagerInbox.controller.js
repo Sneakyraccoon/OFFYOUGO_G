@@ -3,10 +3,17 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
 
     return Controller.extend("ui5.vacation.controller.ManagerInbox", {
         onInit: async function () {
-            const managerId = this.getOwnerComponent().getModel("userModel").getData().id;
-            const response = await fetch(`/api/inbox/${managerId}`);
-            const requests = await response.json();
-            this.getOwnerComponent().setModel(new sap.ui.model.json.JSONModel({ requests }), "inboxModel");
+            try {
+                const managerId = this.getOwnerComponent().getModel("userModel").getData().id;
+                const response = await fetch(`/api/inbox/${managerId}`);
+                
+                if (!response.ok) throw new Error();
+        
+                const requests = await response.json();
+                this.getOwnerComponent().setModel(new sap.ui.model.json.JSONModel({ requests }), "inboxModel");
+            } catch (error) {
+                MessageToast.show("Ошибка загрузки заявок");
+            }
         },
 
         onApprove: async function (oEvent) {

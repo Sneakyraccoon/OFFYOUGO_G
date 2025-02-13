@@ -3,7 +3,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
 
     return Controller.extend("ui5.vacation.controller.VacationRequest", {
         onInit: function () {
-            this.getView().byId("vacationRange").attachChange(this.onDateSelect.bind(this));
+            this.getView().byId("vacationRange").attachSelect(this.onDateSelect.bind(this));
         },
 
         onDateSelect: function () {
@@ -14,6 +14,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
 
         onRequestVacation: async function () {
             const oModel = this.getOwnerComponent().getModel("userModel");
+            if (!oModel) {
+                MessageToast.show("Ошибка: пользователь не загружен");
+                return;
+            }
             const user = oModel.getData();
             const oDatePicker = this.getView().byId("vacationRange");
 

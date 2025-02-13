@@ -1,11 +1,33 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.vacation.controller.ManagerInbox">
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ui5.vacation.controller.ManagerInbox"
+>
     <Page title="Заявки на отпуск">
-        <List id="inboxList" items="{inboxModel>/requests}">
-            <ObjectListItem title="{inboxModel>userName}" number="{inboxModel>status}"
-                attributes="[{text: 'От {inboxModel>startDate} до {inboxModel>endDate}'}]">
+        <List
+            id="inboxList"
+            items="{inboxModel>/requests}"
+        >
+            <ObjectListItem
+                title="{inboxModel>userName}"
+                number="{inboxModel>status}"
+            >
+                <attributes>
+                    <ObjectAttribute
+                        text="От {inboxModel>startDate} до {inboxModel>endDate}"
+                    />
+                </attributes>
                 <buttons>
-                    <Button text="Подтвердить" press="onApprove" type="Accept"/>
-                    <Button text="Отклонить" press="onReject" type="Reject"/>
+                    <Button
+                        text="Подтвердить"
+                        press="onApprove"
+                        type="Accept"
+                    />
+                    <Button
+                        text="Отклонить"
+                        press="onReject"
+                        type="Reject"
+                    />
                 </buttons>
             </ObjectListItem>
         </List>
