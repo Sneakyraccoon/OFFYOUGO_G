@@ -2,7 +2,9 @@
     "sap.ui5": {
       "rootView": {
         "viewName": "ui5.vacation.view.App",
-        "type": "XML"
+        "type": "XML",
+        "id": "app",
+        "target": "login"
       },
       "routing": {
         "config": {
@@ -34,13 +36,16 @@
         ],
         "targets": {
           "login": {
-            "viewName": "Login"
+            "viewName": "Login",
+            "viewPath": "ui5.vacation.view"
           },
           "vacationRequest": {
-            "viewName": "VacationRequest"
+            "viewName": "VacationRequest",
+            "viewPath": "ui5.vacation.view"
           },
           "managerInbox": {
-            "viewName": "ManagerInbox"
+            "viewName": "ManagerInbox",
+            "viewPath": "ui5.vacation.view"
           }
         }
       }

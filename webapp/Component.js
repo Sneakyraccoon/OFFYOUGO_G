@@ -1,8 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "sap/ui/model/json/JSONModel",
-    "./mockserver"
-  ], function (UIComponent, JSONModel, mockserver) {
+    "sap/ui/model/json/JSONModel"
+    
+  ], function (UIComponent, JSONModel) {
     "use strict";
   
     return UIComponent.extend("ui5.vacation.Component", {
@@ -12,7 +12,10 @@ sap.ui.define([
   
       init: function () {
         // Инициализация MockServer
-        mockserver.init();
+// Безопасный запуск MockServer (можно временно закомментировать)
+// if (mockserver && typeof mockserver.init === "function") {
+//   mockserver.init();
+// }
   
         // Вызов init родительского компонента
         UIComponent.prototype.init.apply(this, arguments);

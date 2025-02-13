@@ -6,6 +6,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
             const email = this.getView().byId("emailInput").getValue();
             const password = this.getView().byId("passwordInput").getValue();
 
+            console.log(email);
+            console.log(password);
+
             try {
                 const response = await fetch("/api/login", {
                     method: "POST",
@@ -15,6 +18,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller,
 
                 if (!response.ok) {
                     MessageToast.show("Ошибка входа!");
+
                     return;
                 }
 
