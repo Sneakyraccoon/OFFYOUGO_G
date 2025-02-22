@@ -6,6 +6,12 @@
         "id": "app",
         "target": "login"
       },
+      "dependencies": {
+        "libs": ["sap.m"]
+      },
+      "resourceRoots": {
+        "mockserver": "./mockserver/"
+      },
       "routing": {
         "config": {
           "routerClass": "sap.m.routing.Router",
@@ -48,7 +54,10 @@
             "viewPath": "ui5.vacation.view"
           }
         }
-      }
+      },
+      "bootstrap": {
+      "preload": "off"  
+    }
     },
 
     "sap.app": {
