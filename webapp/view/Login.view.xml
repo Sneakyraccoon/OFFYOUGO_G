@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.vacation.controller.Login">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui5.offyougo.controller.Login">
     <Page title="Вход">
         <VBox>
             <Input id="emailInput" placeholder="Введите email" />

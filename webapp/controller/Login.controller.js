@@ -1,7 +1,7 @@
 sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller, MessageToast) => {
     "use strict";
 
-    return Controller.extend("ui5.vacation.controller.Login", {
+    return Controller.extend("ui5.offyougo.controller.Login", {
         onLogin: async function () {
             const email = this.getView().byId("emailInput").getValue();
             const password = this.getView().byId("passwordInput").getValue();

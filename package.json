@@ -1,15 +1,15 @@
 {
-  "name": "offyougo_g",
+  "name": "ui5.offyougo",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "ui5 serve"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "author": "O.Zhuravlov",
   "description": "UI5 Vacation Booking Application",
+  "scripts": {
+    "start": "ui5 serve -o index.html"
+  },
+
   "devDependencies": {
-    "@ui5/cli": "^4.0.13"
+    "@ui5/cli": "^4.0.13",
+    "ui5-middleware-simpleproxy": "^3"
   }
 }

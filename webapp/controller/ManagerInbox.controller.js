@@ -1,7 +1,7 @@
 sap.ui.define(["sap/ui/core/mvc/Controller", "sap/m/MessageToast"], (Controller, MessageToast) => {
     "use strict";
 
-    return Controller.extend("ui5.vacation.controller.ManagerInbox", {
+    return Controller.extend("ui5.offyougo.controller.ManagerInbox", {
         onInit: async function () {
             try {
 

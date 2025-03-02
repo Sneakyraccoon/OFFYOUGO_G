@@ -1,11 +1,11 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller"
-], function (Controller) {
+ ], (Controller) => {
     "use strict";
-
-    return Controller.extend("ui5.vacation.controller.App", {
-        onInit: function () {
-            console.log("App Controller initialized.");
-        }
+ 
+    return Controller.extend("ui5.offyougo.controller.App", {
+      onInit() {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		}
     });
-});
+ });
