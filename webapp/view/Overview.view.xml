@@ -18,6 +18,7 @@
 		<content>
 			<mvc:XMLView viewName="ui5.offyougo.view.HelloPanel" />
 			<mvc:XMLView viewName="ui5.offyougo.view.InvoiceList" />
+			<mvc:XMLView viewName="ui5.offyougo.view.Calendar" />
 		</content>
 	</Page>
 </mvc:View>

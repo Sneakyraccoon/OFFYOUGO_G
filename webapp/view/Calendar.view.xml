@@ -1,5 +1,5 @@
 <mvc:View
-		controllerName="sap.ui.unified.sample.CalendarSingleIntervalSelection.CalendarSingleIntervalSelection"
+		controllerName="ui5.offyougo.controller.Calendar"
 		xmlns:l="sap.ui.layout"
 		xmlns:u="sap.ui.unified"
 		xmlns:mvc="sap.ui.core.mvc"
